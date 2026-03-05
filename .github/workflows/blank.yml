@@ -6,10 +6,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
+      - name: Adicionando mensagens de log
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "::debug:: Mensagem de Log Debug"
+          echo "::warning:: Mensagem de Log Warning"
+          echo "::notice:: Mensagem de Log Notice"
+          echo "::error:: Mensagem de Log Error executado por ${{ github.actor }}"
+          
